@@ -1,15 +1,20 @@
-import { Text, View } from "react-native";
-
+import MyButton from "@/components/Button";
+import Indicator from "@/components/Indicator";
+import { StyleSheet, Text, View } from "react-native";
 export default function Index() {
-  return (
-    <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Text>Edit app/index.tsx to edit this screen.</Text>
+  return (  
+    <View> 
+      <MyButton/>
+      <Text>Small Size</Text>
+        <Indicator animating = {true} color = {"blue"} size = {'small'}/>
+      <Text>Large Size</Text>
+        <Indicator animating = {true} color = {"green"} size = {'large'}/>
     </View>
   );
 }
+const styles = StyleSheet.create({ 
+  text: { 
+    fontSize: 24, 
+    paddingTop: 50, 
+  },
+}) 
